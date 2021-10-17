@@ -8,31 +8,40 @@ namespace EncryptedText
     {
         static void Main(string[] args)
         {
-            //This security key should be very complex and Random for encrypting the text. This playing vital role in encrypting the text.
-            var secretKey = args[0];
-
-            // text provided to be encrypted or decrypted
-            var inputText = args[1];
-
-            // using 'd' for decrypt or 'e' for encrypt
-            var action = args[2];
-
-            
-            switch (action)
+            if (args.Length == 3)
             {
-                case "d":
-                    var decryptedText = DecryptCipherTextToPlainText(CipherText:inputText, PrivateKey:secretKey);
-                    Console.WriteLine("Decrypted Text: {0}", decryptedText);
-                    break;
-                case "e":
-                    var encryptedText = EncryptPlainTextToCipherText(PlainText:inputText, PrivateKey:secretKey);
-                    Console.WriteLine("Encrypted Text: {0}", encryptedText);
-                    break;
-                default:
-                    Console.WriteLine("must pass 'd' for decrypt or 'e' for encrypt value");
-                    Environment.Exit(1);
-                    break;
+                //This security key should be very complex and Random for encrypting the text. This playing vital role in encrypting the text.
+                var secretKey = args[0];
+
+                // text provided to be encrypted or decrypted
+                var inputText = args[1];
+
+                // using 'd' for decrypt or 'e' for encrypt
+                var action = args[2];
+
+
+                switch (action)
+                {
+                    case "d":
+                        var decryptedText = DecryptCipherTextToPlainText(CipherText: inputText, PrivateKey: secretKey);
+                        Console.WriteLine("Decrypted Text: {0}", decryptedText);
+                        break;
+                    case "e":
+                        var encryptedText = EncryptPlainTextToCipherText(PlainText: inputText, PrivateKey: secretKey);
+                        Console.WriteLine("Encrypted Text: {0}", encryptedText);
+                        break;
+                    default:
+                        Console.WriteLine("must pass 'd' for decrypt or 'e' for encrypt value");
+                        Environment.Exit(1);
+                        break;
+                }
             }
+            else
+            {
+                Console.WriteLine("invalid arguments length");
+                Environment.Exit(1);
+            }
+            
         }
 
         // this value is not used, it must be passed in!

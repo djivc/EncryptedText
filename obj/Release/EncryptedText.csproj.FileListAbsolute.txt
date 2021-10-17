@@ -1,0 +1,6 @@
+C:\Users\danijel.james\Source\repos\EncryptedText\bin\Release\edc.exe
+C:\Users\danijel.james\Source\repos\EncryptedText\bin\Release\edc.pdb
+C:\Users\danijel.james\Source\repos\EncryptedText\obj\Release\EncryptedText.csproj.AssemblyReference.cache
+C:\Users\danijel.james\Source\repos\EncryptedText\obj\Release\EncryptedText.csproj.CoreCompileInputs.cache
+C:\Users\danijel.james\Source\repos\EncryptedText\obj\Release\edc.exe
+C:\Users\danijel.james\Source\repos\EncryptedText\obj\Release\edc.pdb
